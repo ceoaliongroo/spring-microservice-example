@@ -1,5 +1,7 @@
-package com.mantilla.config;
+package com.mantilla.security;
 
+import com.mantilla.security.jwt.JWTAuthenticationFilter;
+import com.mantilla.security.jwt.JWTLoginFilter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

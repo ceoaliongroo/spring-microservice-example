@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SecureApplication {
+public class SecureMicroApplication {
 
 	public static void main(String[] args) {
-        SpringApplication.run(SecureApplication.class, args);
+		SpringApplication.run(SecureMicroApplication.class, args);
 	}
 }
