@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SecureDemo {
 
-    @RequestMapping("/")
+    @RequestMapping("/plus")
     public @ResponseBody String root() {
         return "{\"value\": \"Secure Demo\"}";
     }
