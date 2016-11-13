@@ -2,10 +2,7 @@ package com.example.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 
@@ -15,19 +12,18 @@ import java.util.List;
  */
 @Entity
 @Table(name = "role")
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Role extends AbstractRecord {
 
 	private static final long serialVersionUID = 1193362381908599362L;
 	
-	@Column(name = "name", nullable=false, length=50, unique = true)
+	@Column(name = "name", nullable=false, unique = true)
 	private String name;
 	
-	@Column(name = "description", nullable=true, length=1000)
+	@Column(name = "description")
 	private String description;
-
-	@OneToMany(mappedBy = "role")
-	List<AdminUser> admins;
+//
+//	@OneToMany(mappedBy = "role", cascade = CascadeType.ALL)
+//	List<AdminUser> admins;
 
 	public String getName() {
 		return name;
@@ -44,4 +40,12 @@ public class Role extends AbstractRecord {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+//
+//	public List<AdminUser> getAdmins() {
+//		return admins;
+//	}
+//
+//	public void setAdmins(List<AdminUser> admins) {
+//		this.admins = admins;
+//	}
 }
