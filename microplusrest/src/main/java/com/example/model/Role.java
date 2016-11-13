@@ -21,9 +21,9 @@ public class Role extends AbstractRecord {
 	
 	@Column(name = "description")
 	private String description;
-//
-//	@OneToMany(mappedBy = "role", cascade = CascadeType.ALL)
-//	List<AdminUser> admins;
+
+	@OneToMany(mappedBy = "role", cascade = CascadeType.ALL)
+	List<AdminUser> admins;
 
 	public String getName() {
 		return name;

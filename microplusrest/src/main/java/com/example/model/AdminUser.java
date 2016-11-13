@@ -13,10 +13,10 @@ import javax.persistence.*;
 public class AdminUser  extends AbstractUser {
 	private static final long serialVersionUID = 5598157695509290938L;
 
-//	@ManyToOne
-//	@JoinColumn(name = "role_id")
-//    private Role role;
-//
+	@ManyToOne
+	@JoinColumn(name = "role_id")
+    private Role role;
+
 //    public Role getRole() {
 //        return role;
 //    }
