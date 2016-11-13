@@ -9,9 +9,5 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
  * @author: carlosmantilla
  * @since:
  */
-@RepositoryRestResource(exported = false)
 public interface RoleRepository extends JpaRepository<Role, Long> {
-
-    Role findByName(String name);
-    Role findById(Long Id);
 }

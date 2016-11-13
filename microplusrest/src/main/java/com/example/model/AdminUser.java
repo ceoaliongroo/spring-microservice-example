@@ -1,5 +1,8 @@
 package com.example.model;
 
+import jdk.nashorn.internal.objects.annotations.Getter;
+import jdk.nashorn.internal.objects.annotations.Setter;
+
 import javax.persistence.*;
 
 /**
@@ -17,13 +20,15 @@ public class AdminUser  extends AbstractUser {
 	@JoinColumn(name = "role_id")
     private Role role;
 
-//    public Role getRole() {
-//        return role;
-//    }
-//
-//    public void setRole(Role role) {
-//        this.role = role;
-//    }
+    @Getter(name = "role")
+    public Role getRole() {
+        return role;
+    }
+
+    @Setter
+    public void setRole(Role role) {
+        this.role = role;
+    }
 
     //
 //	@Transient
