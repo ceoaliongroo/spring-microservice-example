@@ -40,12 +40,4 @@ public class Role extends AbstractRecord {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-//
-//	public List<AdminUser> getAdmins() {
-//		return admins;
-//	}
-//
-//	public void setAdmins(List<AdminUser> admins) {
-//		this.admins = admins;
-//	}
 }
