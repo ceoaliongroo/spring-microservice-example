@@ -1,5 +1,7 @@
 package com.example.model;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonSetter;
 import jdk.nashorn.internal.objects.annotations.Getter;
 import jdk.nashorn.internal.objects.annotations.Setter;
 
@@ -20,20 +22,14 @@ public class AdminUser  extends AbstractUser {
 	@JoinColumn(name = "role_id")
     private Role role;
 
-    @Getter(name = "role")
-    public Role getRole() {
-        return role;
+    @Transient
+    public Role getAccess() {
+        return this.role;
     }
 
-    @Setter
+    @JsonSetter
     public void setRole(Role role) {
         this.role = role;
     }
-
-    //
-//	@Transient
-//	public Role getRole() {
-//		return role;
-//	}
 
 }
